@@ -5,6 +5,8 @@ import json
 from re import findall
 import urllib.request
 from bs4 import BeautifulSoup
+
+from infromcve import get_data
 #import pandas as pd
  
 url1 = 'https://api.twitter.com/2/tweets/search/recent?query=from:CVEnew'
@@ -19,8 +21,9 @@ for d in data_json:
   regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
   url = re.findall(regex,text)
   for x in url:
-    print(x[0])
-    print("\r\n")
+    data = get_data(x[0])
+    print(f"{data}\r\n")
+
 
 
 ##initialize columns
