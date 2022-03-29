@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+header {
+ background-color: #0f1622;
+ text-align: left;
+}
+
+.meiao{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.logo {
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 5em;
+  width: 15em;
+}
+
+body {
+  margin: 0;
+  font-family: 'Fira-Code', monospace;
+  color: #8796b0;
+  text-align: center;
+  background-color: white;
+}
+
+p {
+  text-align: justify;
+  width: 70%;
+  margin-left: 15%;
+}
+
+hr {
+  width: 70%;
+}
+
+a {
+  color: #39afcc;
+}
+
+.actionss {
+  text-decoration: none;
+  color: #1A2332;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-inline: 20px;
+  line-height:26px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.normal{
+  color: #8796b0;
+}
+.greeny{
+  color: #afbe59;
+}
+h1{
+  text-shadow: 1px 1px white;
+}
+
+h1, h2 {
+  color: #f88363;
+}
+h3 {
+  text-align: center;
+  color: #f88363;
+}
+h4 {
+  color: #f88363;
+  text-align: justify;
+  width: 70%;
+  margin-left: 15%;
+}
+
+table {
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #f88363;
+  border-radius: 2px;
+}
+
+tr, td, th {
+  border: 1px solid gray;
+  border-radius: 2px;
+  text-align: center;
+  height: 30px;
+  min-width: 5em;
+  max-width: 25em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-break: auto;
+}
+td {
+  color: #afbe59
+}
+
+th {
+  color: #f88363;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+input[type=text] {
+  color: #6A768C;
+  text-align: center;
+  border: 1px solid #f88363;
+  width: 90%;
+  border-radius: 2px;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  color: #f88363;
+  border: 2px solid #f88363;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 1px #f88363;
+}
+
+
+#content {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+  <h2>
+    █░░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░░█<br>
+    █░░░║║║╠─║─║─║║║║║╠─░░░█<br>
+    █░░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░░█<br></h2>
+    <h1>CVE Tracker</h1>
+    <h3><a class="actionss" href="/report">Download Report</a><a class="actionss" href="/upload">Upload client.csv</button></a></h3>
+    <table>
+    <tr>
+      <th>CVE No</th>
+      <th>CVE Date</th>
+      <th>Description</th>
+      <th>External Links</th>
+      <th>Logged</th>
+      <th>actions</th>
+    </tr>
+    <tr>
+      <br>
+      <td><form action="/" method="POST"><input type="text" data-maxlength="20" maxlength="20" name="cve" id="cve" placeholder="input: cve no"></td>
+      <td><input type="text" data-maxlength="10" maxlength="10" name="cve_date" id="cve_date" placeholder="input: yyyy-mm-dd"></td>
+      <td><input type="text" data-maxlength="2000" maxlength="2000" name="description" id="description" placeholder="input: vuln description"></td>
+      <td><div><input type="text" size=auto data-maxlength="2000" maxlength="2000" name="external" id="external" placeholder="input: external links"></div></td>
+      <td><script>var currentTime = new Date()
+        var month = currentTime.getMonth() + 1
+        var day = currentTime.getDate()
+        var year = currentTime.getFullYear()
+        var hours = currentTime.getUTCHours()
+        var minutes = currentTime.getUTCMinutes()
+        document.write(year + "-" + month + "-" + day + "<br>" + hours + ":" + minutes)</script></td>
+      <td><input type="submit" value="Add CVE"></td>
+      </form>
+    </tr>
+    {% for vuln in vulns %}
+      {% for i in range(1,30) %}
+        <tr>
+          <td>{{ vuln.cve }}</td>
+          <td>{{ vuln.cve_date }}</td>
+          <td>{{ vuln.description }}</td>
+          <td>{{ vuln.external }}</td>
+          <td>{{ vuln.date_created }}</td>
+          <td>
+            <a href="/delete/{{ vuln.id }}">Delete</a>
+            <br>
+            <a href="/update/{{ vuln.id }}">Update</a>
+          </td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </table>
+  <br>
+    <br>
+<br>
+</div>
+{% endblock %}
