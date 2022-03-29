@@ -2,11 +2,19 @@ import os
 import re
 import pandas as pd
 from search_db_for_lib import look_for_lib
+from datetime import date, datetime
+from pytz import timezone
 
 
 directory = "clientes"
 
 def make_report():
+  data_e_hora_atuais = datetime.now()
+  fuso_horario = timezone('America/Sao_Paulo')
+  data_e_hora_sao_paulo = data_e_hora_atuais.astimezone(fuso_horario)
+  data_e_hora_sao_paulo_em_texto = data_e_hora_sao_paulo.strftime('%d/%m/%Y %H:%M')
+
+
   f = open("templates/report.html",  "w")
   f.write("")
   f.close()
@@ -20,6 +28,7 @@ def make_report():
   f.write('<div class="content">')
   f.write('<br><h1>CVEs Report</h1><br>')
   f.write('<div><button onClick="window.location.href=`/atualizar`">Atualizar report</button>&nbsp&nbsp<button onClick="window.print()">Print to file</button>&nbsp&nbsp<button onClick="window.location.href=`/upload`">Add cliente</button></a></h3><br><br></div>')
+  f.write(f'<teste class="normal">atualizado pela última vez em: {data_e_hora_sao_paulo_em_texto} (UTC -3/Brasília)</teste>')
 
 
   for filename in os.listdir(directory):
