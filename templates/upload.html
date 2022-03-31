@@ -7,23 +7,9 @@
 {% block body %}
 
 <div class="content">
-  <form action="" >
-    <table style="width: 35%"><th>Name</th><th>Version</th>
-      <tr>
-        <td><input type="text" name="lib" placeholder="nome"/></td>
-        <td><input type="text" name="version" placeholder="13.3.7"/></td>
-      </tr>
-      <div id="container"></div>
-      <tr>
-        <td><button type="submit">submit</button></form></td>
-        <td><a type="NULL" onclick="container.appendChild(input)" href="javascript:container.appendChild(input)">&nbsp&nbsp+&nbsp&nbsp</button></td>
-      </tr>
-    </table>
-</div>
-<div class="content">
   <h2>
     <h1><teste class="normal">upload</teste> cliente_name.csv</h1>
-    <h3>*Precisa <teste class="normal">ser um arquivo <a>.csv</a>, com as duas respectivas colunas:</teste> <br><br><table style="width: 35%"><th>Name</th><th>Version</th>
+    <h3>*Precisa <teste class="normal">ser um arquivo <a>.csv</a>, com as duas respectivas colunas: </teste><a>Name</a><cvee class="laranjinha">,</cvee><a>Version</a> <br><br><table style="width: 35%"><th>Name</th><th>Version</th>
     <tr>
       <td><teste class="normal">ex.:</teste> TP-LINK WR-886N</td>
       <td><teste class="normal">ex.:</teste> 2.3.8</td>
@@ -33,7 +19,7 @@
       <td><teste class="normal">ex.:</teste> 1.2.9</td>      
     </tr>
     </table></h3>
-    <form action = "http://localhost:5000/uploader" method = "POST" 
+    <form action = "/uploader" method = "POST" 
       enctype = "multipart/form-data">
       <input type="file" name = "file" />
       <button type="submit" onClick="submit">Confirmar upload</button>
@@ -42,33 +28,4 @@
     <br>
 <br>
 </div>
-<script>
-  i = 0
-  //Get container from DOM
-  var container = document.getElementById("container");
-
-  //Create an <input> element, set its type and name attributes 
-
-  var inputLib = document.createElement("input");
-
-  inputLib.type = "text";
-  inputLib.name = "name" + i;
-  inputLib.required = "required";
-
-  var inputVer = document.createElement("input");
-
-  inputVer.type = "text";
-  inputVer.name = "ver" + i;
-  inputVer.required = "required";
-
-  //Add Element to div
-  container.appendChild("<tr>")
-  container.appendChild("<td>")
-  container.appendChild(inputLib);
-  container.appendChild("</td>")
-  container.appendChild("<td>")
-  container.appendChild(inputVer);
-  container.appendChild("</td>")
-  container.appendChild("</tr>")
-</script>
 {% endblock %}

@@ -8,7 +8,28 @@
 <div class="meiao">
   <div class="content">
     <br><h1>CVE Tracker</h1>
-      <button onClick="window.location.href=`/report`">Ver report</button>&nbsp&nbsp<button onClick="window.location.href=`/upload`">Add cliente</button>
+      <button style="height: 3em;" class="bordinha" onClick="window.location.href=`/report`">Ver report</button>&nbsp&nbsp<button style="height: 3em;" class="bordinhafina" onClick="window.location.href=`/upload`">Add cliente</button>
+  </div><br><br>
+  <div class="content">
+    <form action="/search" method="POST">
+      <table class="noborder">
+        <tr class="noborder">
+          <td class="noborder" colspan="4"><teste class="laranja">pesquisa rápida de vulnerabilidade</teste></td>
+        </tr>
+        <tr class="noborder">
+          <td class="noborder" colspan="2"><input type="text" name="lib" class="noborder" id="lib" placeholder="ex.: htmldoc"/></td>
+          <td class="noborder" style="width: 8%;" colspan="1"><input type="text" name="version" id="version" placeholder="1.4.3"/></td>
+          <td class="noborder" colspan="1"><button class="bordinhafina" type="submit" value="pesquisar"/>pesquisar</button></td>
+        </tr>
+      </table>
+    </form>
+  
   </div>
+
+</div>
+<div class="outro">
+  {% for arg in args %}
+  <teste class="normal" style="text-align: justify;">{{ arg }}</teste><br><br>
+  {% endfor %}  
 </div>
 {% endblock %}

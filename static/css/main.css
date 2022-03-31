@@ -6,11 +6,18 @@ header {
 }
 
 .meiao{
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
+  margin-top: 3%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.outro{
+  margin-top: 5%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 .logo {
@@ -63,6 +70,9 @@ a {
 .greeny{
   color: #afbe59;
 }
+.laranja{
+  color: #f88363;
+}
 h1{
   text-shadow: 1px 1px white;
 }
@@ -89,7 +99,19 @@ table {
   border: 2px solid #f88363;
   border-radius: 2px;
 }
+.bordinha{
+  border: 2px solid #f88363;
+  border-radius: 2px; 
+}
+.bordinhafina{
+  border: 1px solid gray;
+  border-radius: 2px; 
+}
 
+.noborder {
+  width: 100%;
+  border: 0px solid white;
+}
 tr, td, th {
   border: 1px solid gray;
   border-radius: 2px;
@@ -116,11 +138,14 @@ th {
 input[type=text] {
   color: #6A768C;
   text-align: center;
-  border: 1px solid #f88363;
-  width: 90%;
+  border: 1px solid gray;
+  width: 94%;
   border-radius: 2px;
 }
-
+button[type=submit] {
+  margin-left: 10%;
+  white-space: nowrap;
+}
 input[type=submit] {
   background-color: transparent;
   color: #f88363;
